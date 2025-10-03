@@ -1,0 +1,508 @@
+* Global Styles */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg,#f5f7fa,#c3cfe2);
+  color: #333;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  /* background: aqua; */
+  backdrop-filter: blur(5px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+background: linear-gradient(90deg, #0077b6, #00b4d8, #90e0ef);
+color: white;
+
+
+}
+nav .logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 28px;   /* reduced size */
+  width: auto;
+  margin-right: 8px;
+  object-fit: contain;
+}
+nav ul {
+  display: flex;
+  gap: 25px;
+}
+nav ul li a {
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: medium;
+}
+nav ul li a:hover {
+  color: magenta;
+  transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), 
+              url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=80') 
+              center/cover no-repeat;
+/* background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), 
+              url('https://i.pinimg.com/1200x/47/bc/27/47bc277031d4c2800629fe1f71197ea1.jpg') 
+              center/cover no-repeat; */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+}
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+}
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.4);
+}
+.hero .btn {
+  padding: 15px 40px;
+  background: linear-gradient(90deg,#ffb703,#fb8500);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 50px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.hero .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+/* Popular Destinations */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 30px;
+  padding: 60px;
+}
+.card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px; 
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid rgba(255,255,255,0.2);
+  transition: transform 0.4s;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.card h3 {
+  margin: 15px 0 10px;
+  color: #023e8a;
+}
+.card p {
+  padding: 0 15px 15px;
+  color: grey;
+  flex-grow: 1; 
+}
+.card .btn-card {
+  display: inline-block;
+  margin: 0 auto 15px;
+  padding: 10px 25px;
+  background: linear-gradient(90deg,#0077b6,#023e8a);
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.card .btn-card:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(90deg,#023e8a,#0077b6);
+} 
+
+
+.popular-destinations {
+  padding: 50px;
+  text-align: center;
+}
+
+.popular-destinations h2 {
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #023e8a;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0; 
+}
+
+
+
+/* Search Section */
+.search-container {
+  text-align: center;
+  padding: 80px 20px;
+}
+.search-container input {
+  padding: 15px;
+  width: 300px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+.search-container input:focus {
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.search-container button {
+  padding: 15px 35px;
+  background: linear-gradient(90deg,#0077b6,#023e8a);
+  color: white;
+  font-weight: 600;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.search-container button:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Photo Grid */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
+  padding: 50px;
+}
+.photo-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+.photo-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* Contact Page */
+.contact-container {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 40px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.contact-container h2 {
+  margin-bottom: 30px;
+  color: #0077b6;
+}
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+.contact-container input:focus,
+.contact-container textarea:focus {
+  outline: none;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.contact-container button {
+  padding: 15px;
+  width: 100%;
+  background: linear-gradient(90deg,#0077b6,#023e8a);
+  color: white;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contact-container button:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(90deg,#023e8a,#0077b6);
+}
+
+/* Footer */
+footer {
+  padding: 25px;
+  background: rgba(0,119,182,0.9);
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .cards, .photo-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+  .hero h1 { font-size: 2.5rem; }
+  .hero p { font-size: 1.2rem; }
+  .search-container input { width: 80%; margin-bottom: 10px; }
+}
+
+
+/* Weather Card */
+.weather-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.weather-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.4);
+}
+
+.weather-card p {
+  margin: 6px 0;
+  font-size: 1.1rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.weather-card img {
+  display: block;
+  margin: 10px auto;
+  width: 80px;
+  height: 80px;
+}
+
+
+
+
+/* Weather Card */
+.weather-card {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+.weather-card:hover {
+  transform: translateY(-5px);
+}
+.weather-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+.weather-card p {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+/* Photos Section */
+.photos-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.photos-section h2 {
+  margin-bottom: 20px;
+  color: #023e8a;
+}
+#loadMoreBtn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background: linear-gradient(90deg,#0077b6,#023e8a);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+#loadMoreBtn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg,#023e8a,#0077b6);
+}
+
+
+/* Small Hero for subpages */
+.hero-small {
+  height: 40vh;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80') 
+              center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-small h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* Our Stays Page */
+.our-stays {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+  text-align: center;
+}
+
+.our-stays h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.stays-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.stay-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+  width: 300px;
+  padding: 15px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stay-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+}
+
+.stay-card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.stay-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.stay-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.stay-card .price {
+  font-weight: bold;
+  /* color: #ff6600; */
+  color: #0077cc;
+
+  margin: 10px 0;
+}
+
+.btn-stay {
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 8px;
+  /* background: #ff6600; */
+  background: #0077cc;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.btn-stay:hover {
+  background: #cc5200;
+}
+
+
+.stays-filters {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #0077cc;
+  color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: #005fa3;
+}

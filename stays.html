@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer - Our Stays</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">🌍 Travel Explorer</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="search.html">Search</a></li>
+      <li><a href="stays.html" class="active">Our Stays</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero hero-small">
+    <h1>Our Stays</h1>
+    <p>Handpicked hotels, resorts, and cozy stays just for you.</p>
+  </section>
+
+  <!-- Stays Section -->
+  <section class="our-stays">
+    <h2>Explore Our Stays</h2>
+
+    <!-- Filter Buttons -->
+    <div class="stays-filters">
+      <button class="filter-btn active" data-category="luxury">Luxury</button>
+      <button class="filter-btn" data-category="budget">Budget</button>
+      <button class="filter-btn" data-category="resort">Resort</button>
+    </div>
+
+    <!-- Stays Grid -->
+    <div class="stays-cards" id="staysGrid">
+      <!-- Dynamic stays will load here -->
+    </div>
+
+    <!-- Load More Button -->
+    <button id="loadMoreBtn" class="btn-stay">Load More Stays</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤ by Sreenu</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="stays.js"></script>
+</body>
+</html>
